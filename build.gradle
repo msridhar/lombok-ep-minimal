@@ -1,0 +1,22 @@
+plugins {
+  id "net.ltgt.errorprone" version "0.0.16"
+}
+
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "com.google.guava:guava:23.3-jre"
+    
+    compileOnly "org.projectlombok:lombok:1.18.2"
+
+    errorprone "com.google.errorprone:error_prone_core:2.3.1"
+
+}
+
