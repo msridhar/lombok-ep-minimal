@@ -2,7 +2,6 @@ package lomboktest;
 
 import com.google.common.collect.ImmutableMap;
 import lombok.Getter;
-import lombok.Value;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.StampedLock;
