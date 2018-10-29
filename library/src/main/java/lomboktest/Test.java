@@ -18,12 +18,12 @@ public abstract class Test implements HasId {
     private final StampedLock s;
     private static final ConcurrentHashMap<String, StampedLock> m = new ConcurrentHashMap<>();
     private final Inner2 i2;
-    
+
     public Inner1(String s2, Inner2 i2) {
       this.i2 = i2;
       this.s = m.computeIfAbsent(s2, k -> new StampedLock());
     }
-    
+
   }
 
   static class Inner2 {

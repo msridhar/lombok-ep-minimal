@@ -1,2 +1,9 @@
 .gradle
 build
+
+.DS_Store
+.buckd
+.okbuck
+buck-out
+.watchmanconfig
+BUCK

@@ -1,0 +1,15 @@
+custom_javac_jar = '//.okbuck/ext/com/google/errorprone:error_prone_ant-2.3.1.jar'
+custom_compiler_class_name = 'com.google.errorprone.ErrorProneJavaCompiler'
+
+original_java_library = java_library
+def java_library(
+    javac_jar=None,
+    compiler_class_name=None,
+    **kwargs
+    ):
+
+  original_java_library(
+    javac_jar=custom_javac_jar,
+    compiler_class_name=custom_compiler_class_name,
+    **kwargs
+  )
