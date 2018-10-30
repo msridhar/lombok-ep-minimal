@@ -1,0 +1,14 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "com.google.guava:guava:23.3-jre"
+
+    compileOnly "org.projectlombok:lombok:1.18.2"
+
+    annotationProcessor "org.projectlombok:lombok:1.18.2"
+
+    errorprone "com.google.errorprone:error_prone_core:2.3.1"
+}

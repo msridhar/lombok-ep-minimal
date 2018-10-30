@@ -1,4 +1,3 @@
-
 buildscript {
     repositories {
         google()
@@ -10,7 +9,9 @@ buildscript {
     }
 }
 
-apply plugin: 'com.uber.okbuck'
+plugins {
+  id "net.ltgt.errorprone" version "0.0.16"
+}
 
 allprojects {
     repositories {
@@ -20,6 +21,13 @@ allprojects {
     }
 }
 
+subprojects {
+    apply plugin: "net.ltgt.errorprone"
+}
+
+
+// OkBuck
+apply plugin: 'com.uber.okbuck'
 
 okbuck {
     extraDefs += project.file('DEFS')
